@@ -8,11 +8,16 @@
 // ** FOR OF EXAMPLE ** //
 
 var array = ['word', 9, {test: 'example'}];
+var obj = {key: 'value', key2: 'value2', key3: 'value3'};
 
 for (let i of array){
 
     console.log(i); // prints 'word', 9, {test: 'example'}
 
+}
+
+for (let i in obj){
+    console.log(i);
 }
 
 // ** FOR IN COMPARISON ** //
