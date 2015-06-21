@@ -26,10 +26,38 @@ console.log(arr); //  ['value1', 'value2'];
  function to call on each element of the array
  */
 
-let mapArr = Array.from(obj, function(key, value) {
+let mappedArr = Array.from(obj, function(value, index) {
 
-  return key + value;
+  return value + ' is index: '+ index;
 
 });
 
-console.log(mapArr);
+console.log(mappedArr); // [ 'value1 is index: 0', 'value2 is index: 1' ]
+
+/*
+ Other iterable objects include Set and Map
+ */
+
+// -- SETS --
+
+let someSet = new Set();
+
+// add values
+someSet.add('setval1');
+someSet.add('setval2');
+
+let setArr = Array.from(someSet);
+
+console.log(setArr); // [ 'setval1', 'setval2' ]
+
+// -- MAPS --
+
+let map = new Map();
+
+// Set keys and values as what ever you want
+map.set('key1', 'value1');
+map.set({objkey: 'object is the map key'}, 'value2');
+
+let mapArr = Array.from(map);
+
+console.log(mapArr); // [ [ 'key1', 'value1' ], [ { objkey: 'object is the map key' }, 'value2' ] ]
