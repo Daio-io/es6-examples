@@ -34,6 +34,15 @@ let mappedArr = Array.from(obj, function(value, index) {
 
 console.log(mappedArr); // [ 'value1 is index: 0', 'value2 is index: 1' ]
 
+// The final optional parameter is the 'this' context
+
+let mappedArr2 = Array.from(obj, function(value, index) {
+
+  return this.hello + ' ' + value + ' is index: '+ index + ';'
+
+}, {hello: 'hi there'});
+
+console.log(mappedArr2);
 /*
  Other iterable objects include Set and Map
  */
