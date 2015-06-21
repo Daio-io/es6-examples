@@ -16,6 +16,12 @@ console.log(arr); // [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 // Array .fill also takes an 
 // optional start and end index
 
-arr.fill(2, 5, arr.length);
+// Indicating only start fills the 
+// rest of the array from that point
+arr.fill(2, 5);
 
-console.log(arr);
+console.log(arr); // [ 1, 1, 1, 1, 1, 2, 2, 2, 2, 2 ]
+
+arr.fill(3, 7, arr.length);
+
+console.log(arr); // [ 1, 1, 1, 1, 1, 2, 2, 3, 3, 3 ]
