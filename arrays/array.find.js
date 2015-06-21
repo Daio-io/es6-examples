@@ -2,6 +2,7 @@
 
 /*
   Array.find allows for finding values in an array
+  Array.findIndex allows for finding the index of a value
  */
 
 
@@ -26,4 +27,12 @@ console.log(found); // 5
 let found2 = ['hello', 'world', 1, 2, 3, 4, 6].find(findFive);
 
 console.log(found2); // returns undefined if not found
+
+let foundIndex = [1, 2, 5, 2, 1].findIndex(findFive);
+
+console.log(foundIndex); // 2
+
+let foundIndex2 = [1, 2, 2, 1].findIndex(findFive);
+
+console.log(foundIndex2); // -1 if no index
 
